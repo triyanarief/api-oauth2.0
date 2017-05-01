@@ -1,0 +1,27 @@
+{
+  "name": "api-oauth2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "connect-mongo": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "kerberos": "0.0.23",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-google-oauth": "*",
+    "passport-http-bearer": "*",
+    "passport-local": "*",
+    "rand-token": "*"
+  }
+}
