@@ -4,7 +4,7 @@ module.exports = function(router, passport){
 	router.get('/', function(req, res){
 		res.render('index.ejs');
 	});
-	
+
 	//localhost:8080/auth/login
 	router.get('/login', function(req, res){
 		res.render('auth/login.ejs', { message: req.flash('loginMessage') });
@@ -26,16 +26,16 @@ module.exports = function(router, passport){
 		failureRedirect: '/signup',
 		failureFlash: true
 	}));
-	
-	router.get('/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
-	router.get('/facebook/callback', 
+	router.get('/facebook', passport.authenticate('facebook', {scope: ['email'] }));
+
+	router.get('/facebook/callback',
 	  passport.authenticate('facebook', { successRedirect: '/profile',
 	                                      failureRedirect: '/' }));
 
 	router.get('/google', passport.authenticate('google', {scope: ['profile', 'email']}));
 
-	router.get('/google/callback', 
+	router.get('/google/callback',
 	  passport.authenticate('google', { successRedirect: '/profile',
 	                                      failureRedirect: '/' }));
 
